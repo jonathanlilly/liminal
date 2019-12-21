@@ -6,12 +6,12 @@ In addition to the features of Remark.js, Liminal includes:
 
 *  A particular choice of slide layout and styling
 *  A subtle fade in/out transition between slides        
-*  Markup for a title slide, for footnotes, and for references     
+*  Markup for a title slide, for footnotes, and for citations   
 *  A compass at the bottom left that links to a table of contents        
 *  Markup for a two-column format        
 *  Perhaps most importantly, portable equations using KaTeX
 *  A directory structure to keep things organized
 
-See [index.html](http://www.jmlilly.net/talks/liminal/index.html) for full details within a sample presentation.  
+See [liminal/index.html](http://www.jmlilly.net/talks/liminal/index.html) for full details within a sample presentation.  
 
-Liminal is licensed under the MIT license. See LICENSE.txt for further details.
+Liminal is licensed under the MIT license. See [liminal/LICENSE.txt](http://www.jmlilly.net/talks/liminal/LICENSE.txt) for further details.
