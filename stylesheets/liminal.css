@@ -1,0 +1,33 @@
+/* CSS for liminal aspects the user is unlikely to want to change  */ 
+
+/* Navigation compass */
+.toc {
+    bottom: 6px;
+    opacity: 0.5;
+    position: absolute;
+    left: 20px;
+    font-size: 1.4em;
+}
+
+/* Crossfade transition */
+/* I sorted this by jgrepping for remark for slide-number, see resources.js */
+/* Thanks to http://www.partage-it.com/animez-vos-presentations-remark-js/  (in French) */
+.remark-slide-container {transition: opacity 0.5s ease-out;opacity: 0;}
+.remark-visible {transition: opacity 0.5s ease-out;opacity: 1;}
+
+/* This z-index change is necessary for the crossfade to work */
+.remark-fading {z-index: 9;}
+
+/* Two-column layout */  
+.left-column {
+    width: 48%;
+    float: left;
+}
+        
+.right-column {
+    width: 48%;
+    float: right;
+    padding-top: 0em;
+    margin-top: 0em;
+    text-align: left;
+}
