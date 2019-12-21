@@ -12,6 +12,6 @@ In addition to the features of Remark.js, Liminal includes:
 *  Perhaps most importantly, portable equations using KaTeX
 *  A directory structure to keep things organized
 
-See [index.html](https://www.jmlilly.net/talks/liminal/index.html) for full details within a sample presentation.  
+See [index.html](http://www.jmlilly.net/talks/liminal/index.html) for full details within a sample presentation.  
 
 Liminal is licensed under the MIT license. See LICENSE.txt for further details.
