@@ -6,14 +6,17 @@
     <link rel="stylesheet" href="./stylesheets/katex.min.css">
     <link rel="stylesheet" href="./stylesheets/liminal.css">
 
-    <style>            
-        /* Overall styling for slide */
+    <style>
+    /* This section contains some styling settings you could change if  */
+    /* you really wanted to.  */
+
+        /* Overall styling for slides */
         .remark-slide-content {
             padding:0em 4em 0em 4em;
-            font-family: 'Georgia';
+            font-family: "Georgia","Times New Roman",Times,serif;
             letter-spacing: 0.025em;
         }
-     
+
         /* Styling for level one header, #Text */
         .remark-slide-content h1 {
             font-size: 2.4em;
@@ -21,7 +24,7 @@
             font-weight: bold;
             letter-spacing: 0.05em;
         }
-        
+
         /* Styling for level two header, ##Text */
         .remark-slide-content h2 {
             font-size: 1.55em;
@@ -29,7 +32,7 @@
             font-weight: bold;
             letter-spacing: 0.05em;
         }
-        
+
         /* Styling for level three header, ###Text */
         .remark-slide-content h3 {
             font-size: 1.4em;
@@ -38,95 +41,104 @@
             letter-spacing: 0.05em;
         }
 
-        /* Styling for paragraphs and lists */
-        .remark-slide-content p,ol,ul {font-size: 1.2em;}
+        /* Styling for paragraphs, lists, and divs (thus display equations) */
+        .remark-slide-content p,ol,ul,div {font-size: 1.2em;}
 
         /* Styling for code blocks */
         .remark-code,.remark-inline-code {font-family: 'Ubuntu Mono';}
-        
+
         /* Styling for links */
         a {text-decoration: none;color: #666666;}
         /* Setting link properties is particular, do not change order below*/
-        a:visited {color: #666666}        
+        a:visited {color: #666666}
         a:hover {color: #33AA99}
         a:active,a#active {color: #FF9700;}
-        
-        /* Some special classes for the title slide */        
+
+        /* Some special classes for the title slide */
         .title {
             font-size: 2.4em;
             color: #606060;
             font-weight: bold;
             letter-spacing: 0.05em;
+            padding-bottom: 0.05em;
+            display: block;
         }
-        
+
         .author {
-            font-size: 1.4em;
+            font-size: 1.2em;
             color: #606060;
             font-weight: bold;
             letter-spacing: 0.02em;
+            padding-bottom: 0.02em;
+            display: block;
         }
-        
+
         .coauthor {
             font-size: 1.0em;
             color: #606060;
             font-weight: bold;
             letter-spacing: 0.02em;
+            padding-bottom: 0.02em;
+            display: block;
         }
-        
+
         .subtitle, .institution {
             font-size: 1.0em;
         }
-        
+
         .date {
             font-size: 1.0em;
             font-style: italic;
         }
-        
+
         .note {
             font-size: 0.8em;
         }
-        
+
         /* Other special classes */
         .cite {
             font-size: 0.8em;
             color: #33AA99;
             font-style: italic;
         }
-        
+
         .footnote {
             position: absolute;
             bottom: 2em;
             left: 6em;
             font-size: 0.7em;
         }
-        
+
         .caption {
             font-size: 0.5em;
             line-height: 10%;
         }
-        
+
+        /* Equation size */
+        .katex { font-size: 1.0em; }
     </style>
 </head>
 
 <body>
     <textarea id="source">
+
 class: center, middle
-<br/><br/><br/><br/>                       
-.title[Liminal]     
-.subtitle[A theme for scientific presentations using Remark.js]  
-<br/><br/>                 
-.author[Jonathan Lilly]  
-.institution[Theiss Research, La Jolla, California]      
+<br/><br/><br/><br/>
+.title[Liminal]
+.subtitle[A theme for scientific presentations using Remark.js]
 <br/><br/>
-.date[December 21, 2019]        
+.author[Jonathan Lilly]
+.institution[The Planetary Science Institute, Tucson, Arizona]
+<br/><br/>
+.date[October 28, 2022]
 <br/><br/>
 .note[Created with [{Liminal}](https://github.com/jonathanlilly/liminal) using [{Remark.js}](http://remarkjs.com/) + [{Markdown}](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [{KaTeX}](https://katex.org)]
-        
+
 ---
 name: toc
 class: left
-#Table of Contents        
-      
+#Table of Contents
+
 1. [What is Liminal?](#whatisliminal)
 1. [How it Works](#howitworks)
 1. [Liminal Features](#liminalfeatures)
@@ -140,338 +152,358 @@ class: left
 1. [Liminal Contents](#contents)
 1. [License](#license)
 1. [Why Not MathJax?](#whynotmathjax)
-        
-        
-<!-- Comment out the next slide if you don't want the Table of Contents link -->         
+
+
+<!-- Comment out the next slide if you don't want the Table of Contents link -->
 ---
 layout: true  .toc[[&#10023;](#toc)]
-        
+
 ---
 name: whatisliminal
-class: left  
+class: left
 #What is Liminal?
 
 Liminal is a framework for writing scientific presentations in a very simple and efficient way, including such features as incremental slides, figures, animations, and equations.
-        
+
 --
 
 It is a minor extension of a remarkable project called [{Remark.js}](http://remarkjs.com/)  written by Ole Petter Bang.
-            
---
-        
-Liminal presentations are viewed through a web browser, but have the look and feel of a powerpoint presentation.      
-        
---
-        
-These presentations are self-contained, so that they can be viewed offline.  Because relatively few supporting files (about 1.5 Mb) are required, they are readily portable.
 
 --
-        
-Experience shows the display of the presentations to be nearly identical across different browsers and different operating systems.
-        
+
+Liminal presentations are viewed through a web browser, but have the look and feel of a powerpoint presentation.
+
 --
-        
-It is also easy to customize the presentation style to your liking by editing the CSS header.         
+
+These presentations are self-contained, so that they can be viewed offline.  Because relatively few supporting files (about 1.2 Mb zipped) are required, they are readily portable.
+
+--
+
+Experience shows the display of the presentations to be nearly identical across different browsers and different operating systems.
+
+--
+
+It is also easy to customize the presentation style to your liking by editing the CSS header.
 
 ---
-name: howitworks       
-class: left  
+name: howitworks
+class: left
 #How it Works
 
-[{Remark.js}](http://remarkjs.com/) is a Javascript interpreter for the Markdown language that is intended for presentations.  
-  
-[{Markdown}](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet), if you're not familiar with it, is a very simple markup language, much easier than writing in LaTeX or HTML.
-        
-Remark.js lets you write a presentation in Markdown, and have it rendered live by a browser, with no compilation needed. 
+[{Remark.js}](http://remarkjs.com/) is a Javascript interpreter for the Markdown language that is intended for presentations.
 
-You can then give a presentation directly from your browser that looks like a powerpoint presentation.   
+[{Markdown}](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet), if you're not familiar with it, is a very simple markup language, much easier than writing in LaTeX or HTML.
+
+Remark.js lets you write a presentation in Markdown, and have it rendered live by a browser, with no compilation needed.
+
+You can then give a presentation directly from your browser that looks like a powerpoint presentation.
 
 Liminal modifies Remark.js to be suitable for scientific presentations with the possiblity of lots of equations.
-        
-It is mostly just CSS styling, together with an integration with the [{KaTeX}](https://katex.org) interpreter for converting LaTeX to HTML. 
 
-This is why I refer to it Liminal as simply a &ldquo;theme&rdquo; for Remark.js.  
+It is mostly just CSS styling, together with an integration with the [{KaTeX}](https://katex.org) interpreter for converting LaTeX to HTML.
+
+This is why I refer to it Liminal as simply a &ldquo;theme&rdquo; for Remark.js.
 
 
 ---
-name: liminalfeatures        
-class: left 
+name: liminalfeatures
+class: left
 #Liminal Features
-        
+
 Remark.js has some great features as described in the [{Introductory Slideshow}](https://remarkjs.com) and also the [{Wiki}](https://github.com/gnab/remark/wiki).
-        
+
 You should definitely read these, especially the part of the Wiki on [{Markdown}](https://github.com/gnab/remark/wiki/Markdown).  Also don't miss these neat [{keyboard shortcuts}](https://github.com/gnab/remark/wiki/Keyboard-shortcuts).
-        
+
 Liminal adds the following features to Remark.js.
 
 *  A particular choice of slide layout and styling
-*  A subtle fade in/out transition between slides        
+*  A subtle fade in/out transition between slides
 *  Markup for a title slide, for footnotes$^1$.footnote[$1.$ Here is a footnote, located at the bottom of the page as the name suggests.], and for citations <br/>
-.cite[See for example Moriarty (1888) and Adler, Holmes, and Watson (1891)]        
-*  A compass at the bottom left that links to the table of contents        
-*  Markup for a two-column format        
+.cite[See for example Moriarty (1888) and Adler, Holmes, and Watson (1891)]
+*  A compass at the bottom left that links to the table of contents
+*  Markup for a two-column format
 *  Perhaps most importantly, portable equations using KaTeX
 *  A directory structure to keep things organized
 
 We'll now take a look at some of these features in more detail.
-                
----
-name: styling       
-class: left 
-#Layout and Styling
-    
-The Liminal font choices reflect the fact that I prefer to have really big sentences so that the slides are readily visible from a distance.   
-        
-Moreover, the text is monochromatic, apart from for the references, to show off your colorful figures.  
-                
-At some point I got tired of using color or underlining to represent HTML links, and felt this was distracting from the content.  
-        
-So I started represented links using a grayscale and then enclosing the links in curly brackes, such as this one to my [{home page}](http://www.jmlilly.net). 
-        
-They do change color on mouseover however.  
-        
-The styling can be changed very easily by editing the  &lang;style&rang; section of the HTML header.  
 
-We'll look now at how figures are included in a presentation, before moving on to more Liminal features.        
-       
 ---
-name: samplefigure        
+name: styling
+class: left
+#Layout and Styling
+
+The Liminal font choices reflect the fact that I prefer to have really big sentences so that the slides are readily visible from a distance.
+
+Moreover, the text is monochromatic, apart from for the references, to show off your colorful figures.
+
+At some point I got tired of using color or underlining to represent HTML links, and felt this was distracting from the content.
+
+So I started represented links using a grayscale and then enclosing the links in curly brackes, such as this one to my [{home page}](http://www.jmlilly.net).
+
+They do change color on mouseover however.
+
+The styling can be changed very easily by editing the  &lang;style&rang; section of the HTML header.
+
+We'll look now at how figures are included in a presentation, before moving on to more Liminal features.
+
+---
+name: samplefigure
 class: center
 #A Sample Figure
-        
+
 <img style="width:60%"  src="./figures/figure1.png">
 
 Here is a figure, together with a caption that describes it.
-      
+
 ---
 class: left
 ##Code For The Sample Figure
 
 Including figures is done through the HTML &ldquo;img&rdquo; tag.  The code for the previous slide illustrates some Remark.js basics:
-        
-```haml  
+
+```haml
 ---
-name: samplefigure                
+name: samplefigure
 class: center
 #A Sample Figure
-        
+
 <img style="width:60%"  src="./figures/figure1.png">
 
 Here is a figure, together with a caption that describes it.
 ```
-        
-The three hyphens, &ldquo;---&rdquo;, start a new slide.  The hyphens must contain **nothing else** on their line, including no leading or trailing spaces, and should be preceded by a blank line.  
-        
-The &ldquo;name&rdquo; line specifies an ID that we can link to from the Table of Contents or elsewhere.  The   &ldquo;class&rdquo; line specifies that this slide will be center justified.  Finally the &ldquo;\#&rdquo; specifies an H1-class header. 
-        
-The title of the current slide begins with \#\#, specifying an H2-class header that is rendered in a smaller font.
-        
+
+The three hyphens, &ldquo;---&rdquo;, start a new slide.  The hyphens must contain **nothing else** on their line, including no leading or trailing spaces, and should be preceded by a blank line.
+
+The &ldquo;name&rdquo; line specifies an ID that we can link to from the Table of Contents or elsewhere.  The   &ldquo;class&rdquo; line specifies that this slide will be center justified.  Finally the &ldquo;\#&rdquo; specifies an H1-class header.
+
+The title of the slide begins with \#\#, specifying an H2-class header.
+
 ---
-name: sampleanimation        
-class: center    
+name: sampleanimation
+class: center
 #A Sample Animation
 --
-        
+
 <video preload="auto" width="60%" height="auto"  data-setup="{}" autoplay loop controls><source src="./videos/vortexmovie.mp4" type="video/mp4" /></video>
-        
+
 --
-        
-Embedding animations is straightforward as well.        
+
+Embedding animations is straightforward as well.
 
 ---
 class: left
 ##Code For The Animation
 
 Including animations is done using the HTML &ldquo;video&rdquo; tag.
-                
+
 ```haml
 ---
-name: sampleanimation                
+name: sampleanimation
 class: center
-#What About Animations?        
+#What About Animations?
 --
-        
+
 <video preload="auto" width="60%" height="auto"  data-setup="{}" autoplay loop controls>
 <source src="./videos/vortexmovie.mp4" type="video/mp4" /></video>
-        
+
 --
-        
-Embedding animations is straightforward as well.   
-```             
-        
-To delay the presentation of an item and create an incremental slide, as we did on the previous slide, put a line containing **only** two hyphens ('--') followed by an empty line.  
-        
-White spaces before or after the hyphens will cause them to be displayed rather than interpreted as markup.   
-            
+
+Embedding animations is straightforward as well.
+```
+
+To delay the presentation of an item and create an incremental slide, as we did on the previous slide, put a line containing **only** two hyphens ('--') followed by an empty line.
+
+White spaces before or after the hyphens will cause them to be displayed rather than interpreted as markup.
+
 ---
 name: twocolumn
 class: left
 #  Two Column Layout
-        
-.left-column[Some people really like a two-column layout, for example, to have text on one side and a figure on the other.<br/><br/>  This can be done in Liminal using the &ldquo;left-column&rdquo; and  &ldquo;right-column&rdquo; classes. <br/><br/> This slide is created as shown at the bottom of the page.  Note the blank line in between the two classes.]
-        
-.right-column[<img style="width:100%"  src="./figures/figure1.png">]    
 
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>                
+.left-column[Some people really like a two-column layout, for example, to have text on one side and a figure on the other.<br/><br/>  This can be done in Liminal using the &ldquo;left-column&rdquo; and  &ldquo;right-column&rdquo; classes. <br/><br/> This slide is created as shown at the bottom of the page.  Note the blank line in between the two classes.]
+
+.right-column[<img style="width:100%"  src="./figures/figure1.png">]
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 ```haml
 .left-column[Some people really like a two-column layout...]
-        
-.right-column[<img style="width:100%"  src="./figures/figure1.png">]        
-```               
+
+.right-column[<img style="width:100%"  src="./figures/figure1.png">]
+```
 
 ---
 class: left
 #  Two Column Layout
-        
+
 .left-column[<img style="width:100%"  src="./figures/figure1.png">]
-        
+
 .right-column[Just a demonstration that the two-column layout works with the figure on the left and the text on the right.]
-        
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>                
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 ```haml
-.left-column[<img style="width:100%"  src="./figures/figure1.png">] 
-        
-.right-column[Just a demonstration that the two-column layout works...]       
-```               
-        
+.left-column[<img style="width:100%"  src="./figures/figure1.png">]
+
+.right-column[Just a demonstration that the two-column layout works...]
+```
+
 ---
 name: navigation
-class: left 
+class: left
 #The Navigation Compass
-        
-You have probably noticed that in the lower left-hand corner of all slides after the Table of Contents, there appears a small compass.  
-        
-If you click on it, it will take you back to the Table of Contents. 
-        
+
+You have probably noticed that in the lower left-hand corner of all slides after the Table of Contents, there appears a small compass.
+
+If you click on it, it will take you back to the Table of Contents.
+
 The nagivation compass is created by including an invisible layout slide just after the Table of Contents, which reads
-        
-```remark 
+
+```remark
 layout: true .toc[[&amp;&#35;10023;](#toc)]
 ```
-      
+
 where &ldquo;&amp;\&#35;10023;&rdquo; is the HTML code for the compass symbol, &#10023;.
-        
+
 This uses the [{layout}](https://github.com/gnab/remark/wiki/Markdown#layout) property of Remark.js.  The \.toc is a Remark.js [{content class}](https://github.com/gnab/remark/wiki/Markdown#content-classes) enclosing a link in [{Markdown}](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#links) format.
-   
+
 In multi-file presentations, the compass can take you to an overall index by replacing &ldquo;#toc&rdquo; with e.g. &ldquo;index.html#toc&rdquo;.
-        
- 
+
+
 ---
 name: equations
 class: left
 #  Equations in Liminal
-        
-As convenient as Remark.js is, equations pose a bit of a challenge. 
 
-This is especially the case if you, or someone else, wants to view the presentation offline, when you can't access online libraries. 
-        
-After some tinkering with the  [{MathJax}](https://www.mathjax.org) library, I ended up using [{KaTeX}](https://katex.org) to render equations, for reasons to be described later. 
-                
-Liminal includes a complete working distribution of the KaTeX library so your presentation will render equations correctly whether you are online or offline. 
-        
-It is only about 1.5 Mb and therefore easy to distribute.  
-        
+As convenient as Remark.js is, equations pose a bit of a challenge.
+
+This is especially the case if you, or someone else, wants to view the presentation offline, when you can't access online libraries.
+
+After some tinkering with the  [{MathJax}](https://www.mathjax.org) library, I ended up using [{KaTeX}](https://katex.org) to render equations, for reasons to be described later.
+
+Liminal includes a complete working distribution of the KaTeX library so your presentation will render equations correctly whether you are online or offline.
+
+It is only about 1.2 Mb and therefore easy to distribute.
+
 ---
 class: left
 #  Equations in Liminal
 
 With the KaTeX library, you can use LaTeX code to write inline equations such as $E=mc^2$, or full-line equations like
 
-        
+
 <div>\[\Gamma(t)=  \pi \, \Im\left\{ \mathbf{x}_+^H(t) \, \frac{\mathrm{d}}{\mathrm{d} t}\mathbf{x}_+(t)\right\}.\]</div>
 
-Inline equations are enclosed in single dollar signs, while full-line equations are enclosed in double dollar signs surrounded by a div, 
-        
+Inline equations are enclosed in single dollar signs, while full-line equations are enclosed in double dollar signs surrounded by a div,
+
 ```haml
-... inline equations such as $E=mc^2$, or full-line equations like 
-        
-<div>$$\Gamma ... $$</div>    
+... inline equations such as $E=mc^2$, or full-line equations like
+
+<div>\[\Gamma ... \]</div>
 ```
 where the div begins on a newline, has only white space after it on its line, and is followed by a blank line.
 
-You can also use \\( to start an inline equation and \\[ to start a full-line equation, and \\) and \\] to close them.
 
-        
+---
+name: issues
+class: left
+# Adding Vertical Space
+
+Adding vertical space in KaTeX is done differently that in LaTeX.  In order to change this
+
+<div>\[\bm{\beta}_1(x_o,y_o)\equiv \begin{bmatrix} \frac{\partial z}{\partial x}  (x_o,y_o)
+\\ \frac{\partial z}{\partial y} (x_o,y_o) \end{bmatrix}\]</div>
+
+into this
+
+<div>\[\bm{\beta}_1(x_o,y_o)\equiv \begin{bmatrix}  \frac{\partial z}{\partial x}  (x_o,y_o)
+\\[3pt] \frac{\partial z}{\partial y} (x_o,y_o) \end{bmatrix}\]</div>
+
+we add a vertical space amount at the end of the double slash line end commands, like so
+
+```haml
+\begin{bmatrix}\frac{\partial z}{\partial x}  (x_o,y_o)\\[3pt]
+\frac{\partial z}{\partial y} (x_o,y_o) \end{bmatrix}
+```
+In LaTeX, this would be done with a \\vspace{3pt} command.
+
 ---
 name: issues
 class: left
 # Known Issues
-        
+
 A known issue with Remark.js is that it incorrectly parses inline mathematical equations containing more than one underscore, each of which is followed by a quantity in curly braces.
-        
-For example: $\int\_{-\infty}^\infty e^{-i \omega \tau} R\_{zz}(\tau) \, d\tau=  S\_{zz}(\omega)$.      
-        
-The correct LaTeX code, displayed below, does not render.         
+
+For example: $\int\_{-\infty}^\infty e^{-i \omega \tau} R\_{zz}(\tau) \, d\tau$.
+
+The correct LaTeX code, displayed below, does not render.
 ```haml
-$\int_{-\infty}^\infty e^{-i \omega \tau} R_{zz}(\tau) \, d\tau=  S_{zz}(\omega)$      
+$\int_{-\infty}^\infty e^{-i \omega \tau} R_{zz}(\tau) \, d\tau$
 ```
-        
-The workaround is to escape the underscore characters in such an expression by preceding them by a backslash. 
+
+The workaround is to escape the underscore characters in such an expression by preceding them by a backslash.
 ```haml
-$\int\_{-\infty}^\infty e^{-i \omega \tau} R\_{zz}(\tau) \, d\tau=  S\_{zz}(\omega)$      
+$\int\_{-\infty}^\infty e^{-i \omega \tau} R\_{zz}(\tau) \, d\tau$
 ```
-        
-This is a known bug and will hopefully be addressed in future Remark.js releases.         
+
+Another known issue is that KaTeX will fail in Remark.js if an equation includes a label, e.g. &ldquo;\label{myequation}&rdquo;.
 
 ---
 name: contents
 class: left
 # Liminal Contents
-        
-The Liminal distribution includes this file, *index.html*, as well as *template.html* which is a bare template.  
-        
-There are then four subdirectories. 
-        
-1. **figures** is for you to put your figures in. 
+
+The Liminal distribution includes this file, *index.html*, as well as *template.html* which is a bare template.
+
+There are then four subdirectories.
+
+1. **figures** is for you to put your figures in.
 1. **movies** is for you to put your animations in.
 1. **javascript** contains the Remark.js and KaTeX javascript files.
-1.  **stylesheets** contains the CSS file for KaTeX, a subdirectory **fonts** from the KaTeX distribution, and finally *liminal.css* which has some styling you are less likely to want to change.          
+1.  **stylesheets** contains the CSS file for KaTeX, a subdirectory **fonts** from the KaTeX distribution, and finally *liminal.css* which has some styling you are less likely to want to change.
 
 The minimized Remark.js file is available [{here}](https://remarkjs.com/downloads/remark-latest.min.js) while the KaTeX distribution can be downloaded from [{here}](https://github.com/KaTeX/KaTeX/releases). KaTeX is then limited to only the relevant files following [{these instructions}](https://katex.org/docs/browser.html).
 
-If you remove the sample files from **figures** and **movies**, the size of the Liminal distribution is only about 2 Mb.        
-        
+For your own use you can obviously remove the sample items from **figures** and **movies**.
 ---
 name: license
 class: left
 # License
-        
-Liminal, like Remark.js and KaTeX, is open-source software licensed under the [{MIT license}](LICENSE.txt). 
-        
-The file *remark.min.js* is copyright &copy; Ole Petter Bang. 
+
+Liminal, like Remark.js and KaTeX, is open-source software licensed under the [{MIT license}](LICENSE.txt).
+
+The file *remark.min.js* is copyright &copy; Ole Petter Bang.
 
 Components from KaTeX are copyright &copy; Khan Academy and other contributors.
 
 The remaining files &mdash; *index.html*, *about.html*, *call-javascript.js*, and *liminal.css* &mdash; are copyright &copy; Jonathan M. Lilly.
-        
+
 ---
 name: whynotmathjax
 class: left
 #  Why Not MathJax?
-        
-It is worth saying some words about how I ended up using KaTeX rather than the more well known [{MathJax}](https://www.mathjax.org) library.           
-         
-Until Version 3 of MathJax, the main distribution was about 100 Mb and included tens of thousands of files.  I did not find an obvious way to make the distribution smaller.  
-        
-Thus, if you wanted to view a presentation offline, you had to include this entire distribution with the presentation.  That is obviously unweidly and not very portable. 
-        
-As of MathJax 3, the distribution size is now only 22 Mb, in part due to the source code no longer being included. 
-        
-Furthermore there are [{instructions}](https://github.com/mathjax/MathJax#reducing-the-size-of-the-components-directory) for reducing it down to 1.5 Mb for our LaTeX-to-HTML case. This solves the portability problem.
+
+It is worth saying some words about how I ended up using KaTeX rather than the more well known [{MathJax}](https://www.mathjax.org) library.
+
+Until Version 3 of MathJax, the main distribution was about 100 Mb and included tens of thousands of files.  I did not find an obvious way to make the distribution smaller.
+
+Thus, if you wanted to view a presentation offline, you had to include this entire distribution with the presentation.  That is obviously unweidly and not very portable.
+
+As of MathJax 3, the distribution size is now only 22 Mb, in part due to the source code no longer being included.
+
+Furthermore there are [{instructions}](https://github.com/mathjax/MathJax#reducing-the-size-of-the-components-directory) for reducing it down to 1.2 Mb for our LaTeX-to-HTML case. This solves the portability problem.
 
 ---
 class: left
 #  Why Not MathJax?
 
 <!--A minor annoying feature of the default MathJax behavior is that the equation rendering will change as the page is being loaded, leading to the equations jumping around.  This ugly behavior is avoided by calling MathJax with &ldquo;defer&rdquo; rather than  &ldquo;async&rdquo;.-->
-        
-However, even after sorting out this issue, I still ran into another problem. MathJax 3 has a habit of obscuring parts of my equations on a fairly regular basis when using Safari, my browser of choice. 
-        
-I didn't see these problems in other browsers but couldn't sort out what was causing it. 
-        
-Because of this, I decided to go with KaTeX, which looks fine on Safari, Firefox, and Chrome.  
-        
-In addition, KaTeX renders much faster than MathJax, which is a benefit for long presentations with lots of equations.         
+
+However, even after sorting out this issue, I still ran into another problem. MathJax 3 has a habit of obscuring parts of my equations on a fairly regular basis when using Safari, my browser of choice.
+
+I didn't see these problems in other browsers but couldn't sort out what was causing it.
+
+Because of this, I decided to go with KaTeX, which looks fine on Safari, Firefox, and Chrome.
+
+In addition, KaTeX renders much faster than MathJax, which is a benefit for long presentations with lots of equations.
 
 ---
 class: middle, center
@@ -482,14 +514,12 @@ class: middle, center
 Have fun!
 
 [{www.jmlilly.net}](http://www.jmlilly.net/index.html)
- 
+
     </textarea>
     <script src="./javascript/remark-latest.min.js" type="text/javascript"></script>
     <script defer src="./javascript/katex.min.js"></script>
     <script defer src="./javascript/auto-render.min.js"></script>
     <!-- Call remark.js and KaTeX with liminal default settings -->
-    <script type="text/javascript" src="./javascript/call-javascript.js">
-</script>
-       
+    <script type="text/javascript" src="./javascript/call-javascript.js"></script>
 </body>
 </html>

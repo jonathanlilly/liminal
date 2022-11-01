@@ -1,6 +1,6 @@
 # Liminal
 
-Liminal is a theme for scientific presentations using [Remark.js](https://remarkjs.com) together with [KaTeX](https://katex.org), available for [download](https://github.com/jonathanlilly/liminal/archive/master.zip) from Github.
+Liminal is a theme for scientific presentations using [Remark.js][1] together with [KaTeX][2], available for [download][3] from Github.
 
 In addition to the features of Remark.js, Liminal includes: 
 
@@ -12,6 +12,12 @@ In addition to the features of Remark.js, Liminal includes:
 *  Perhaps most importantly, portable equations using KaTeX
 *  A directory structure to keep things organized
 
-See [liminal/index.html](http://www.jmlilly.net/liminal/index.html) for full details within a sample presentation.  
+See [liminal/index.html][4] for full details within a sample presentation.  
 
-Liminal is licensed under the MIT license. See [liminal/LICENSE.txt](http://www.jmlilly.net/liminal/LICENSE.txt) for further details.
+Liminal is licensed under the MIT license. See [liminal/LICENSE.txt][5] for further details.
+
+[1]:	https://remarkjs.com
+[2]:	https://katex.org
+[3]:	https://github.com/jonathanlilly/liminal/archive/master.zip
+[4]:	http://www.jmlilly.net/talks/liminal-v2/index.html
+[5]:	http://www.jmlilly.net/talks/liminal-v2/LICENSE.txt

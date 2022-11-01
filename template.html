@@ -6,14 +6,17 @@
     <link rel="stylesheet" href="./stylesheets/katex.min.css">
     <link rel="stylesheet" href="./stylesheets/liminal.css">
 
-    <style>            
-        /* Overall styling for slide */
+    <style>
+    /* This section contains some styling settings you could change if  */
+    /* you really wanted to.  */
+
+        /* Overall styling for slides */
         .remark-slide-content {
             padding:0em 4em 0em 4em;
-            font-family: 'Georgia';
+            font-family: "Georgia","Times New Roman",Times,serif;
             letter-spacing: 0.025em;
         }
-     
+
         /* Styling for level one header, #Text */
         .remark-slide-content h1 {
             font-size: 2.4em;
@@ -21,7 +24,7 @@
             font-weight: bold;
             letter-spacing: 0.05em;
         }
-        
+
         /* Styling for level two header, ##Text */
         .remark-slide-content h2 {
             font-size: 1.55em;
@@ -29,7 +32,7 @@
             font-weight: bold;
             letter-spacing: 0.05em;
         }
-        
+
         /* Styling for level three header, ###Text */
         .remark-slide-content h3 {
             font-size: 1.4em;
@@ -38,136 +41,144 @@
             letter-spacing: 0.05em;
         }
 
-        /* Styling for paragraphs and lists */
-        .remark-slide-content p,ol,ul {font-size: 1.2em;}
+        /* Styling for paragraphs, lists, and divs (thus display equations) */
+        .remark-slide-content p,ol,ul,div {font-size: 1.2em;}
 
         /* Styling for code blocks */
         .remark-code,.remark-inline-code {font-family: 'Ubuntu Mono';}
-        
+
         /* Styling for links */
         a {text-decoration: none;color: #666666;}
         /* Setting link properties is particular, do not change order below*/
-        a:visited {color: #666666}        
+        a:visited {color: #666666}
         a:hover {color: #33AA99}
         a:active,a#active {color: #FF9700;}
-        
+
         /* Some special classes for the title slide */
         .title {
-            font-size: 2.0em;
+            font-size: 2.4em;
             color: #606060;
             font-weight: bold;
             letter-spacing: 0.05em;
+            padding-bottom: 0.05em;
+            display: block;
         }
-        
+
         .author {
-            font-size: 1.4em;
+            font-size: 1.2em;
             color: #606060;
             font-weight: bold;
             letter-spacing: 0.02em;
+            padding-bottom: 0.02em;
+            display: block;
         }
-        
+
         .coauthor {
             font-size: 1.0em;
             color: #606060;
             font-weight: bold;
             letter-spacing: 0.02em;
+            padding-bottom: 0.02em;
+            display: block;
         }
-        
+
         .subtitle, .institution {
             font-size: 1.0em;
         }
-        
+
         .date {
             font-size: 1.0em;
             font-style: italic;
         }
-        
+
         .note {
             font-size: 0.8em;
         }
-        
+
         /* Other special classes */
         .cite {
             font-size: 0.8em;
             color: #33AA99;
             font-style: italic;
         }
-        
+
         .footnote {
             position: absolute;
             bottom: 2em;
             left: 6em;
             font-size: 0.7em;
         }
-        
+
         .caption {
             font-size: 0.5em;
             line-height: 10%;
         }
-        
+
+        /* Equation size */
+        .katex { font-size: 1.0em; }
     </style>
 </head>
 
 <body>
     <textarea id="source">
+
 class: center, middle
-<br/><br/><br/><br/>                       
-.title[My Awesome Presentation]     
+<br/><br/><br/><br/>
+.title[My Awesome Presentation]
 .subtitle[A theme for scientific presentations using Remark.js]
-<br/><br/>          
-.author[Jonathan Lilly]  
-.institution[Theiss Research, La Jolla, California]      
-<br/>
-.coauthor[Sherlock S. Holmes<sup>1</sup>, John H. Watson<sup>2</sup>]  
-.institution[<sup>1</sup>Baker Street Research, <sup>2</sup>Edinburgh University]      
 <br/><br/>
-.date[December 21, 2019] 
-<br/><br/><br/>
+.author[Jonathan Lilly]
+.institution[The Planetary Science Institute, Tucson, Arizona]
+<br/><br/>
+.coauthor[Sherlock S. Holmes<sup>1</sup>, John H. Watson<sup>2</sup>]
+.institution[<sup>1</sup>Baker Street Research, <sup>2</sup>Edinburgh University]
+<br/><br/>
+.date[October 28, 2022]<br/>
+<br/><br/>
 .note[Created with [{Liminal}](https://github.com/jonathanlilly/liminal) using [{Remark.js}](http://remarkjs.com/) + [{Markdown}](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) +  [{KaTeX}](https://katex.org)]
-    
+
 ---
 name: toc
 class: left
-#Table of Contents        
-      
+#Table of Contents
+
 1. [Introduction](#introduction)
 1. [Method](#method)
 1. [Conclusions](#conclusions)
 
-        
-<!-- Comment out the next slide if you don't want the Table of Contents link -->         
+<!-- Comment out the next slide if you don't want the Table of Contents link -->
+
 ---
 layout: true  .toc[[&#10023;](#toc)]
-        
+
 ---
-name: introduction  
+name: introduction
 class: left
 #  Introduction
 
-This is a bare template.  For more details and a demonstration of features, see [{index.html}](index.html).        
+This is a bare template.  For more details and a demonstration of features, see [{index.html}](index.html).
+
 ---
-name: method     
+name: method
 class: left
 #  Method
-        
 ---
 class: center
 ##A Figure on an Unindexed Centered Slide
 
 <img style="width:60%"  src="./figures/figure1.png">
 
-        
 ---
 class: center
 #An Animation
-        
+
 <video preload="auto" width="60%" height="auto"  data-setup="{}" autoplay loop controls><source src="./videos/vortexmovie.mp4" type="video/mp4" /></video>
-                
+
 ---
-name: conclusions       
+name: conclusions
 class: left
 #  Conclusions
-        
+
 ---
 class: middle, center
 #  That's All!
@@ -183,6 +194,6 @@ Have fun!
     <!-- Call remark.js and KaTeX with liminal default settings -->
     <script type="text/javascript" src="./javascript/call-javascript.js">
 </script>
-       
+
 </body>
 </html>
